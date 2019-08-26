@@ -1,4 +1,5 @@
-const display = document.getElementById('display');
+import error from './error';
+
 const pixabayAPI = process.env.pixabayAPI;
 
 export default async function fetchImage(weather) {
@@ -7,13 +8,12 @@ export default async function fetchImage(weather) {
     const photoData = await weatherData.json();
     if (photoData.hits.length >= 1) {
       const rand = Math.floor(Math.random() * photoData.hits.length + 1);
-      display.innerHTML += `
+      return `
       <div id="gif"><img src="${photoData.hits[rand].webformatURL}" alt="image"></div>
     `;
     }
+    return error();
   } catch (err) {
-    display.innerHTML += `<span>
-        <img src="../dist/assets/img/11.png" alt="error">
-      </span>`;
+    return error();
   }
 }
