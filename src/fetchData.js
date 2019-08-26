@@ -6,7 +6,7 @@ const fetchData = () => {
   const location = document.getElementById('location').value;
   const unit = document.getElementById('unit').value;
   const weatherData = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${weatherAPI}`;
-  fetch(weatherData, {
+  return fetch(weatherData, {
     mode: 'cors',
   }).then((data) => data.json()).then((res) => ({
     cod: res.cod,

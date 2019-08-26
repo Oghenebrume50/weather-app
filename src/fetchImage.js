@@ -8,9 +8,7 @@ export default async function fetchImage(weather) {
     const photoData = await weatherData.json();
     if (photoData.hits.length >= 1) {
       const rand = Math.floor(Math.random() * photoData.hits.length + 1);
-      return `
-      <div id="gif"><img src="${photoData.hits[rand].webformatURL}" alt="image"></div>
-    `;
+      return `<div id="gif"><img src="${photoData.hits[rand].webformatURL}" alt="image"></div>`;
     }
     return error();
   } catch (err) {

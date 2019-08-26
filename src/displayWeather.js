@@ -5,12 +5,10 @@ import error from './error';
 
 const display = document.getElementById('display');
 
-const displayWeather = () => {
-  const { cod, main, weather, unit, name } = fetchData();
-
+const displayWeather = async () => {
+  const { cod, main, weather, unit, name } = await fetchData();
   switch (cod) {
-    case 200: display.innerHTML += fetchImage(weather.main);
-      display.innerHTML = '';
+    case 200: display.innerHTML = '';
       display.innerHTML += `
     <div class="infoHold">
     <span id="1">City: ${name}</span>
@@ -22,6 +20,7 @@ const displayWeather = () => {
     <span id="2">Outcome: ${weather.main}</span>
     </div>
   `;
+      display.innerHTML += await fetchImage(weather.main);
       break;
     default: display.innerHTML = '';
       display.innerHTML += error();
