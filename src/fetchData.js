@@ -1,10 +1,11 @@
-import error from './error';
+import { error } from './error';
 
 const weatherAPI = process.env.weatherAPI;
 
 const fetchData = () => {
   const location = document.getElementById('location').value;
   const unit = document.getElementById('unit').value;
+  document.getElementById('location').value = '';
   const weatherData = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${weatherAPI}`;
   return fetch(weatherData, {
     mode: 'cors',
