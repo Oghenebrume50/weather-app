@@ -1,0 +1,32 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oghenebrume50/weather-app.git"
+  },
+  "author": "Raphael Noriode <raphlbrume@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oghenebrume50/weather-app/issues"
+  },
+  "homepage": "https://github.com/Oghenebrume50/weather-app#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "dotenv-webpack": "^1.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
