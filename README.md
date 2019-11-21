@@ -8,4 +8,4 @@ This is a bare-bone weather app project that focuses on building API integration
 
 ### To view the project online
 
-1. Follow this [link]()
+1. Follow this [link](https://oghenebrume50.github.io/weather-app/dist/index.html)
